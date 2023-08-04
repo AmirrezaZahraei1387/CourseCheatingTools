@@ -1,1 +1,3 @@
 # CourseCheatingTools
+
+Sometimes your employer force you to complete a course you completely hate! In these coueses you generally need to first study a bunch of things and then you can go and give a test as many times as you want. In the test however there are a limited number of questions which  some of them in each quiz will be randomly selected and displayed for. The good news is this that they will repeat. Now with this tool you can ignore the studying part and go for the test to pass it. Basicly you will run  the test for many times, and this tool will save them for you. When the number of questions reached a certain amount, you can for the quiz to pass. By using this tool you can save a lot of time and do the quiz approximately in 15 minuts.  
