@@ -44,7 +44,26 @@ class NChoiceTAnswer:
                 return index
         return -1
 
+    def getAnswers(self):
 
+        answers = {"TRUE": [], "FALSE": [], "NONE": []}
+        # true are the indicis if the choices that are true.
+        # false is the indicis of the choices that are wrong
+        # none are the indicis that are not clear weather true or not
 
+        index = -1
+
+        for ch in self.__choices:
+            index += 1
+            if ch.mode is True:
+                answers["TRUE"].append(index)
+
+            elif ch.mode is False:
+                answers["FALSE"].append(index)
+
+            elif ch.mode is None:
+                answers["NONE"].append(index)
+
+        return answers
 
 
