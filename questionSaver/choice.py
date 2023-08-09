@@ -1,6 +1,6 @@
 """a choice is one of the possible answers to a questions.
 it could be true or false."""
-from nltk.tokenize import word_tokenize
+from difflib import SequenceMatcher
 
 
 class Choice:
@@ -26,7 +26,7 @@ class Choice:
         self.__mode = m
 
 
-ACCEPTED_RANGE = 3
+ACCEPTED_RANGE = 0.85
 
 
 def choiceEq(txt: str, choice: Choice):
@@ -35,16 +35,6 @@ def choiceEq(txt: str, choice: Choice):
     the given text or not. it will check it approximately because
     the user may enter the txt a little different."""
 
-    words_txt = word_tokenize(txt)
-    words_choice = word_tokenize(choice.title)
-    length_word_choice = len(words_choice)
+    res = SequenceMatcher(None, txt, choice.title).ratio()
+    return res >= ACCEPTED_RANGE
 
-    found_words = 0
-
-    for word in words_txt:
-        if word in words_choice:
-            found_words += 1
-
-    if found_words > length_word_choice - ACCEPTED_RANGE:
-        return True
-    return False
