@@ -29,12 +29,12 @@ class Choice:
 ACCEPTED_RANGE = 0.85
 
 
-def choiceEq(txt: str, choice: Choice):
+def txtEq(txt1: str, txt2: str):
     """this will get a text and the list of the choices.
     then it will say if one of the choices is approximately equal to
     the given text or not. it will check it approximately because
     the user may enter the txt a little different."""
 
-    res = SequenceMatcher(None, txt, choice.title).ratio()
+    res = SequenceMatcher(None, txt1, txt2).ratio()
     return res >= ACCEPTED_RANGE
 
