@@ -1,7 +1,6 @@
 import questionSaver.choice as choice
 
 
-
 class NChoiceTAnswer:
 
     __title: str = ""
