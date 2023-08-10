@@ -6,6 +6,7 @@ class NChoiceTAnswer:
     __title: str = ""
     __choices: list = []
     __name: str
+    names: list = []
 
     def __init__(self, title, choices, name):
         """title is the title of the question and the choices are the choices.
@@ -21,7 +22,12 @@ class NChoiceTAnswer:
 
         self.__title = title
         self.__choices = choices
-        self.__name = name
+
+        if self.__name not in self.names:
+            self.__name = name
+            self.names.append(self.__name)
+        else:
+            raise IndexError("the name provided for the question is not unique")
 
     @property
     def title(self):
@@ -70,5 +76,4 @@ class NChoiceTAnswer:
                 answers["NONE"].append(index)
 
         return answers
-
 
