@@ -5,8 +5,9 @@ class NChoiceTAnswer:
 
     __title: str = ""
     __choices: list = []
+    __name: str
 
-    def __init__(self, title, choices):
+    def __init__(self, title, choices, name):
         """title is the title of the question and the choices are the choices.
         for example in the following example:
 
@@ -20,6 +21,7 @@ class NChoiceTAnswer:
 
         self.__title = title
         self.__choices = choices
+        self.__name = name
 
     @property
     def title(self):
@@ -32,6 +34,10 @@ class NChoiceTAnswer:
         """this function will set the mode of a choice.
         true if it is true and false if the choice is incorrect"""
         self.__choices[index].mode = index
+
+    @property
+    def name(self):
+        return self.__name
 
     def searchChoice(self, txt):
 
