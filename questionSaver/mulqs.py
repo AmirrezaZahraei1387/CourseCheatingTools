@@ -1,4 +1,5 @@
-from questionSaver.choice import txtEq
+from questionSaver import txtEq
+from questionSaver import NChoiceTAnswer
 
 
 class MultipleQuestionS:
@@ -27,7 +28,7 @@ class MultipleQuestionS:
         if mode.lower() == "exact":
             for q in self.__questions:
                 index += 1
-                if q == value:
+                if q.name == value:
                     return index
             return -1
 
@@ -41,6 +42,3 @@ class MultipleQuestionS:
 
         else:
             raise ValueError("unrecognized mode.")
-
-
-
