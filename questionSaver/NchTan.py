@@ -1,4 +1,4 @@
-import questionSaver.choice as choice
+from questionSaver import txtEq
 
 
 class NChoiceTAnswer:
@@ -50,7 +50,7 @@ class NChoiceTAnswer:
 
         for ch in self.__choices:
             index += 1
-            if choice.txtEq(txt, ch.title):
+            if txtEq(txt, ch.title):
                 return index
         return -1
 

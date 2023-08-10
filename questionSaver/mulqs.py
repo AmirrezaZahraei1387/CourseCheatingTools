@@ -1,5 +1,4 @@
 from questionSaver import txtEq
-from questionSaver import NChoiceTAnswer
 
 
 class MultipleQuestionS:
