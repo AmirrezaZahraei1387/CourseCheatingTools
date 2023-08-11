@@ -6,7 +6,7 @@ from difflib import SequenceMatcher
 class Choice:
 
     __title: str
-    __mode: bool
+    __mode: bool = None
 
     def __init__(self, title: str):
         self.__title = title
