@@ -76,3 +76,13 @@ class NChoiceTAnswer:
 
         return answers
 
+    def __str__(self):
+
+        question = self.__title
+
+        for c in self.__choices:
+            question += '\n'+c+'('+c.mode+')'
+
+        return question
+
+
