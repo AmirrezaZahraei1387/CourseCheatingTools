@@ -79,9 +79,10 @@ class NChoiceTAnswer:
     def __str__(self):
 
         question = self.__title
-
+        num = 0
         for c in self.__choices:
-            question += '\n'+c+'('+c.mode+')'
+            num += 1
+            question += '\n'+str(num)+')  '+str(c)+'  ('+str(c.mode)+')'
 
         return question
 

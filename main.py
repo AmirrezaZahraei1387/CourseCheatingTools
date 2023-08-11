@@ -47,7 +47,14 @@ def get_question():
     return qs.NChoiceTAnswer(title, choices, name)
 
 
+def show_all_questions(all_questions: qs.MultipleQuestionS):
+
+    for i in all_questions:
+        print(i)
+
+
 allQuestions = qs.MultipleQuestionS([])
+
 
 while True:
 
@@ -57,12 +64,9 @@ while True:
         allQuestions.append(get_question())
 
     if command == "show-all-questions":
-        pass
+        show_all_questions(allQuestions)
 
     elif command == "set-choice-mode":
-        pass
-
-    elif command == "add-choice":
         pass
 
     elif command == "remove-question":

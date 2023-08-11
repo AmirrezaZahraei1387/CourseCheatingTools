@@ -25,6 +25,9 @@ class Choice:
         if the choice is true or false."""
         self.__mode = m
 
+    def __str__(self):
+        return self.__title
+
 
 ACCEPTED_RANGE = 0.85
 
